@@ -11,6 +11,7 @@ const Auth = () => {
           onError={() => {
             console.log('Login Failed');
           }}
+          scope="openid read write"
           useOneTap
         />;
     </>
