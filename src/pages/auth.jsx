@@ -4,12 +4,11 @@ const Auth = () => {
   return (
     <>
       <GoogleLogin
-        onSuccess={(responseGoogle) => {
-          console.log(responseGoogle);
-          console.log(responseGoogle);
-          console.log(responseGoogle.profileObj.email);
-          console.log(responseGoogle.profileObj.name);
-          console.log(responseGoogle.profileObj.imageUrl);
+        onSuccess={(response) => {
+          const profile = response.profileObj;
+          console.log(profile.email);
+          console.log(profile.name);
+          console.log(profile.imageUrl);
         }}
         onError={() => {
           console.log("Login Failed");
