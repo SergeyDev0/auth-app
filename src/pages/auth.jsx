@@ -1,31 +1,35 @@
 import React, { useState } from 'react';
-import GoogleLogin from 'react-google-button';
+import { GoogleLogin } from '@react-oauth/google';
 
-const GoogleAuth = () => {
-  const [profile, setProfile] = useState(null);
+const App = () => {
+  const [user, setUser] = useState(null);
 
-  const responseGoogle = (response) => {
-    console.log(response);
-    setProfile(response.profileObj);
+  const handleLogin = (userInfo) => {
+    setUser(userInfo);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
   };
 
   return (
     <div>
-      {profile ? (
+      {user ? (
         <div>
-          <h2>User Profile</h2>
-          <p>Name: {profile.name}</p>
-          <p>Email: {profile.email}</p>
-          <img src={profile.imageUrl} alt={profile.name} />
+          <h2>Welcome, {user.name}</h2>
+          <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
         <GoogleLogin
-          onSuccess={responseGoogle}
-          onFailure={responseGoogle}
+          clientId=""
+          buttonText="Login with Google"
+          onSuccess={handleLogin}
+          onFailure={handleLogin}
+          cookiePolicy={'single_host_origin'}
         />
       )}
     </div>
   );
 };
 
-export default GoogleAuth;
+export default App;
