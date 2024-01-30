@@ -16,7 +16,7 @@ const App = () => {
     <div>
       {user ? (
         <div>
-          <h2>Welcome, {user.name}</h2>
+          <h2>Welcome, {user.name}{console.log(user)}</h2>
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
