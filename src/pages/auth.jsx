@@ -11,17 +11,12 @@ const Auth = () => {
   return (
     <>
       <GoogleLogin
-        onSuccess={(response) => {
-          const profile = response;
-          console.log(profile);
-        }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-        scope="profile email"
-        useOneTap
+        clientId="ваш_client_id"
+        buttonText="Войти через Google"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={'single_host_origin'}
       />
-      ;
     </>
   );
 };
