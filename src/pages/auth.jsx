@@ -6,9 +6,9 @@ const Auth = () => {
       <GoogleLogin
         onSuccess={(responseGoogle) => {
           console.log(responseGoogle);
-          console.log(response.profileObj.email);
-          console.log(response.profileObj.name);
-          console.log(response.profileObj.imageUrl);
+          console.log(responseGoogle.profileObj.email);
+          console.log(responseGoogle.profileObj.name);
+          console.log(responseGoogle.profileObj.imageUrl);
         }}
         onError={() => {
           console.log("Login Failed");
