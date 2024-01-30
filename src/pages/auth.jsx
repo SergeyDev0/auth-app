@@ -11,8 +11,14 @@ const Auth = () => {
         onError={() => {
           console.log('Login Failed');
         }}
+        scope={"profile email"}
         useOneTap
       />;
+
+      useGoogleOneTapLogin({
+        ...
+        auto_select
+      });
     </>
   )
 };
