@@ -8,12 +8,11 @@ const Auth = () => {
           const profile = response.profileObj;
           console.log(profile.email);
           console.log(profile.name);
-          console.log(profile.imageUrl);
         }}
         onError={() => {
           console.log("Login Failed");
         }}
-        scope="openid read write"
+        scope="profile email"
         useOneTap
       />
       ;
