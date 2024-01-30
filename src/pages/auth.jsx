@@ -11,7 +11,7 @@ const Auth = () => {
   return (
     <>
       <GoogleLogin
-        clientId="ваш_client_id"
+        clientId="114098492060-6bek2p0f2544ht483hrrb1munpejn9nq.apps.googleusercontent.com"
         buttonText="Войти через Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
