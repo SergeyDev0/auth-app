@@ -6,6 +6,7 @@ const Auth = () => {
       <GoogleLogin
         onSuccess={(responseGoogle) => {
           console.log(responseGoogle);
+          console.log(responseGoogle);
           console.log(responseGoogle.profileObj.email);
           console.log(responseGoogle.profileObj.name);
           console.log(responseGoogle.profileObj.imageUrl);
