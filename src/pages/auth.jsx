@@ -17,7 +17,6 @@ const Auth = () => {
 
   return (
     <div>
-      <h1>Авторизация через Google</h1>
       <GoogleLogin
         clientId="114098492060-6bek2p0f2544ht483hrrb1munpejn9nq.apps.googleusercontent.com"
         buttonText="Войти через Google"
