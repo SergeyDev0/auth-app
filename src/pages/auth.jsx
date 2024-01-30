@@ -6,8 +6,7 @@ const Auth = () => {
       <GoogleLogin
         onSuccess={(response) => {
           const profile = response.profileObj;
-          console.log(profile.email);
-          console.log(profile.name);
+          console.log(profile);
         }}
         onError={() => {
           console.log("Login Failed");
