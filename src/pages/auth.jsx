@@ -11,7 +11,6 @@ const Auth = () => {
         onError={() => {
           console.log('Login Failed');
         }}
-        scope={"profile email"}
         useOneTap
       />;
 
