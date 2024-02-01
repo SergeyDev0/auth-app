@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './styles/reset.scss'
-import './index.scss'
 import { GoogleOAuthProvider } from '@react-oauth/google'
+import './scss/reset.scss'
+import './scss/index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
