@@ -5,7 +5,6 @@ import Form from '../components/auth/form/Form';
 import '../scss/auth.scss';
 
 const App = () => {
-  
   return (
     <div className='content-wrapper'>
       <Header />
